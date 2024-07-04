@@ -9,6 +9,53 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      // Initialize Decap CMS
+      DecapCMS.init({
+        config: {
+          siteId: 'decap-cms-demo',
+          adminPath: '/admin',
+          netlifyIdentity: true,
+          netlifyIdentitySettings: {
+            container: 'body',
+            locale: 'en',
+            logo: false,
+            theme: 'light',
+            enableExternalProviders: true,
+            externalProviderUrl: 'https://www.google.com',
+            externalProviderName: 'Google',
+            externalProviderLoginUrl: 'https://www.google.com',
+            externalProviderCallbackUrl: 'https://www.google.com',
+            externalProviderLogoutUrl: 'https://www.google.com',
+            externalProviderTokenUrl: 'https://www.google.com',
+            externalProviderTokenRefreshUrl: 'https://www.google.com',
+            externalProviderTokenRevokeUrl: 'https://www.google.com',
+            externalProviderTokenRefreshInterval: 3600,
+            externalProviderTokenRefreshBeforeExpiry: 300,
+            externalProviderTokenRefreshRetryInterval: 60,
+            externalProviderTokenRefreshRetryLimit: 3,
+            externalProviderTokenRefreshRetryBackoff: 2,
+            externalProviderTokenRefreshRetryBackoffMax: 60,
+            externalProviderTokenRefreshRetryBackoffJitter: 0.1,
+            externalProviderTokenRefreshRetryBackoffFactor: 2,
+            externalProviderTokenRefreshRetryBackoffExponent: 2,
+            externalProviderTokenRefreshRetryBackoffExponentMax: 10,
+            externalProviderTokenRefreshRetryBackoffExponentJitter: 0.1,
+            externalProviderTokenRefreshRetryBackoffExponentFactor: 2,
+            externalProviderTokenRefreshRetryBackoffExponentMaxFactor: 10,
+            externalProviderTokenRefreshRetryBackoffExponentMaxJitter: 0.1,
+            externalProviderTokenRefreshRetryBackoffExponentFactorFactor: 2,
+            externalProviderTokenRefreshRetryBackoffExponentMaxFactorFactor: 10,
+            externalProviderTokenRefreshRetryBackoffExponentMaxJitterFactor: 0.1,
+            externalProviderTokenRefreshRetryBackoffExponentMaxFactorJitter: 0.1,
+            externalProviderTokenRefreshRetryBackoffExponentMaxFactorFactorFactor: 2,
+            externalProviderTokenRefreshRetryBackoffExponentMaxFactorJitterFactor: 0.1,
+            externalProviderTokenRefreshRetryBack
+          }
+        }
+      });
+    </script>
+
   </body>
 </html>   
